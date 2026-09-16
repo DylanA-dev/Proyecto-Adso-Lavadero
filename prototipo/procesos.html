@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>AquaLavado - Control de procesos</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">AL</div>
+      <div>
+        <div class="name">AquaLavado</div>
+        <div class="sub">Gestión del lavadero</div>
+      </div>
+    </div>
+    <nav>
+      <a href="dashboard.html">📊 Panel principal</a>
+      <a href="lavados.html">🚿 Registro de lavados</a>
+      <a href="clientes.html">👤 Gestión de clientes</a>
+      <a href="procesos.html" class="active">⚙️ Control de procesos</a>
+      <a href="reportes.html">📈 Reportes</a>
+    </nav>
+    <div class="user">
+      <div class="avatar">D</div>
+      <div><strong>Dylan Arias</strong><br>Administrador</div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <div>
+        <h1>Control de procesos</h1>
+        <div class="meta">Tablero de seguimiento de los lavados en tiempo real</div>
+      </div>
+    </div>
+
+    <div class="kanban">
+      <div class="col2">
+        <h3>En cola <span class="tag orange">2</span></h3>
+        <div class="ticket">
+          <div class="veh">Nissan — FGH852</div>
+          <div class="det">Lavado completo · Cliente: Andrés Salazar</div>
+          <div class="det">🕒 09:15</div>
+        </div>
+        <div class="ticket">
+          <div class="veh">Kia — RTY741</div>
+          <div class="det">Lavado detallado · Cliente: Luisa Torres</div>
+          <div class="det">🕒 09:40</div>
+        </div>
+      </div>
+      <div class="col2">
+        <h3>En proceso <span class="tag cyan">2</span></h3>
+        <div class="ticket">
+          <div class="veh">Mazda — XYZ789</div>
+          <div class="det">Lavado completo · Cliente: María Gómez</div>
+          <div class="det">⏳ 60% · Operario: Juan P.</div>
+        </div>
+        <div class="ticket">
+          <div class="veh">Chevrolet — QWE456</div>
+          <div class="det">Lavado básico · Cliente: Julián Ríos</div>
+          <div class="det">⏳ 35% · Operario: Camilo R.</div>
+        </div>
+      </div>
+      <div class="col2">
+        <h3>Finalizados <span class="tag green">8</span></h3>
+        <div class="ticket">
+          <div class="veh">Renault — ABC123</div>
+          <div class="det">Lavado premium · Cliente: Carlos Muñoz</div>
+          <div class="det">✅ 09:05 · Entrega lista</div>
+        </div>
+        <div class="ticket">
+          <div class="veh">Toyota — JKL963</div>
+          <div class="det">Lavado completo · Cliente: Sara Peña</div>
+          <div class="det">✅ 08:40 · Entregado</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="panel" style="margin-top:25px;">
+      <h2>Avance del proceso actual</h2>
+      <table>
+        <thead>
+          <tr><th>Lavado</th><th>Operario</th><th>Etapa actual</th><th>Progreso</th><th>Acciones</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Mazda — XYZ789</td><td>Juan P.</td><td>Enjuague</td><td>60%</td><td><button class="btn small cyan">Avanzar etapa</button></td></tr>
+          <tr><td>Chevrolet — QWE456</td><td>Camilo R.</td><td>Espuma</td><td>35%</td><td><button class="btn small cyan">Avanzar etapa</button></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

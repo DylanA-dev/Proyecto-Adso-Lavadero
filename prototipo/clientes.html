@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>AquaLavado - Gestión de clientes</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">AL</div>
+      <div>
+        <div class="name">AquaLavado</div>
+        <div class="sub">Gestión del lavadero</div>
+      </div>
+    </div>
+    <nav>
+      <a href="dashboard.html">📊 Panel principal</a>
+      <a href="lavados.html">🚿 Registro de lavados</a>
+      <a href="clientes.html" class="active">👤 Gestión de clientes</a>
+      <a href="procesos.html">⚙️ Control de procesos</a>
+      <a href="reportes.html">📈 Reportes</a>
+    </nav>
+    <div class="user">
+      <div class="avatar">D</div>
+      <div><strong>Dylan Arias</strong><br>Administrador</div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <div>
+        <h1>Gestión de clientes</h1>
+        <div class="meta">Registro y consulta de clientes del lavadero</div>
+      </div>
+      <button class="btn cyan">+ Nuevo cliente</button>
+    </div>
+
+    <div class="panel">
+      <h2>Listado de clientes</h2>
+      <div class="field" style="max-width:320px;">
+        <input type="text" placeholder="🔍 Buscar por nombre, cédula o placa...">
+      </div>
+      <table>
+        <thead>
+          <tr><th>Nombre</th><th>Cédula</th><th>Teléfono</th><th>Vehículo</th><th>Último lavado</th><th>Acciones</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Carlos Muñoz</td><td>1.114.523.887</td><td>310 555 2241</td><td>Renault — ABC123</td><td>14/08/2026</td><td><button class="btn small gray">Editar</button></td></tr>
+          <tr><td>María Gómez</td><td>1.098.774.120</td><td>312 774 8890</td><td>Mazda — XYZ789</td><td>14/08/2026</td><td><button class="btn small gray">Editar</button></td></tr>
+          <tr><td>Julián Ríos</td><td>1.005.221.456</td><td>315 220 9965</td><td>Chevrolet — QWE456</td><td>13/08/2026</td><td><button class="btn small gray">Editar</button></td></tr>
+          <tr><td>Luisa Torres</td><td>1.132.908.335</td><td>316 883 4451</td><td>Kia — RTY741</td><td>12/08/2026</td><td><button class="btn small gray">Editar</button></td></tr>
+          <tr><td>Andrés Salazar</td><td>1.145.667.209</td><td>311 447 1108</td><td>Nissan — FGH852</td><td>11/08/2026</td><td><button class="btn small gray">Editar</button></td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="panel">
+      <h2>Registrar nuevo cliente</h2>
+      <div class="row">
+        <div class="col">
+          <div class="field"><label>Nombre completo</label><input type="text" placeholder="Nombres y apellidos"></div>
+          <div class="field"><label>Cédula</label><input type="text" placeholder="Número de identificación"></div>
+        </div>
+        <div class="col">
+          <div class="field"><label>Teléfono</label><input type="text" placeholder="Celular o fijo"></div>
+          <div class="field"><label>Vehículo (marca y placa)</label><input type="text" placeholder="Ej. Chevrolet — ABC123"></div>
+        </div>
+      </div>
+      <button class="btn">Guardar cliente</button>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>AquaLavado - Panel principal</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">AL</div>
+      <div>
+        <div class="name">AquaLavado</div>
+        <div class="sub">Gestión del lavadero</div>
+      </div>
+    </div>
+    <nav>
+      <a href="dashboard.html" class="active">📊 Panel principal</a>
+      <a href="lavados.html">🚿 Registro de lavados</a>
+      <a href="clientes.html">👤 Gestión de clientes</a>
+      <a href="procesos.html">⚙️ Control de procesos</a>
+      <a href="reportes.html">📈 Reportes</a>
+    </nav>
+    <div class="user">
+      <div class="avatar">D</div>
+      <div><strong>Dylan Arias</strong><br>Administrador</div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <div>
+        <h1>Panel principal</h1>
+        <div class="meta">Viernes 14 de agosto de 2026</div>
+      </div>
+      <span class="badge">Sesión activa</span>
+    </div>
+
+    <div class="cards">
+      <div class="card">
+        <div class="label">Lavados hoy</div>
+        <div class="value">24</div>
+        <div class="trend">▲ 12% vs. ayer</div>
+      </div>
+      <div class="card orange">
+        <div class="label">Ingresos del día</div>
+        <div class="value">$486.000</div>
+        <div class="trend">▲ 8% vs. ayer</div>
+      </div>
+      <div class="card green">
+        <div class="label">Clientes registrados</div>
+        <div class="value">152</div>
+        <div class="trend">+6 esta semana</div>
+      </div>
+      <div class="card purple">
+        <div class="label">Lavados en proceso</div>
+        <div class="value">5</div>
+        <div class="trend">2 en cola de espera</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Accesos rápidos</h2>
+      <div class="row">
+        <div class="col" style="text-align:center;">
+          <a href="lavados.html" class="btn cyan" style="width:100%; margin-bottom:10px;">Registrar nuevo lavado</a>
+          <a href="procesos.html" class="btn" style="width:100%;">Ver procesos en curso</a>
+        </div>
+        <div class="col">
+          <h2 style="font-size:14px;">Lavados por tipo (últimos 7 días)</h2>
+          <div class="chart">
+            <div class="bar" style="height:70%;"><span>Básico</span></div>
+            <div class="bar" style="height:95%;"><span>Completo</span></div>
+            <div class="bar" style="height:55%;"><span>Premium</span></div>
+            <div class="bar" style="height:40%;"><span>Detallado</span></div>
+          </div>
+          <div class="legend">
+            <span><span class="dot" style="background:#0e3a7d;"></span>Total: 118 lavados</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

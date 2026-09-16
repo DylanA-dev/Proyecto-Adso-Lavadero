@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>AquaLavado - Registro de lavados</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">AL</div>
+      <div>
+        <div class="name">AquaLavado</div>
+        <div class="sub">Gestión del lavadero</div>
+      </div>
+    </div>
+    <nav>
+      <a href="dashboard.html">📊 Panel principal</a>
+      <a href="lavados.html" class="active">🚿 Registro de lavados</a>
+      <a href="clientes.html">👤 Gestión de clientes</a>
+      <a href="procesos.html">⚙️ Control de procesos</a>
+      <a href="reportes.html">📈 Reportes</a>
+    </nav>
+    <div class="user">
+      <div class="avatar">D</div>
+      <div><strong>Dylan Arias</strong><br>Administrador</div>
+    </div>
+  </aside>
+
+  <div class="main">
+    <div class="topbar">
+      <div>
+        <h1>Registro de lavados</h1>
+        <div class="meta">Crear y consultar los servicios de lavado</div>
+      </div>
+    </div>
+
+    <div class="panel">
+      <h2>Nuevo lavado</h2>
+      <div class="row">
+        <div class="col">
+          <div class="field">
+            <label>Cliente</label>
+            <select>
+              <option>— Seleccione un cliente —</option>
+              <option>Carlos Muñoz</option>
+              <option>María Gómez</option>
+              <option>Julián Ríos</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Vehículo (placa)</label>
+            <input type="text" placeholder="Ej. ABC123">
+          </div>
+        </div>
+        <div class="col">
+          <div class="field">
+            <label>Tipo de lavado</label>
+            <select>
+              <option>Básico — $18.000</option>
+              <option>Completo — $32.000</option>
+              <option>Premium — $45.000</option>
+              <option>Detallado — $60.000</option>
+            </select>
+          </div>
+          <div class="field">
+            <label>Fecha y hora</label>
+            <input type="text" value="14/08/2026 09:30">
+          </div>
+        </div>
+      </div>
+      <button class="btn cyan">Guardar lavado</button>
+    </div>
+
+    <div class="panel">
+      <h2>Lavados recientes</h2>
+      <table>
+        <thead>
+          <tr><th>ID</th><th>Cliente</th><th>Vehículo</th><th>Tipo</th><th>Valor</th><th>Estado</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>#124</td><td>Carlos Muñoz</td><td>ABC123</td><td>Premium</td><td>$45.000</td><td><span class="tag green">Finalizado</span></td></tr>
+          <tr><td>#125</td><td>María Gómez</td><td>XYZ789</td><td>Completo</td><td>$32.000</td><td><span class="tag cyan">En proceso</span></td></tr>
+          <tr><td>#126</td><td>Julián Ríos</td><td>QWE456</td><td>Básico</td><td>$18.000</td><td><span class="tag orange">En cola</span></td></tr>
+          <tr><td>#127</td><td>Luisa Torres</td><td>RTY741</td><td>Detallado</td><td>$60.000</td><td><span class="tag blue">Pendiente</span></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</body>
+</html>

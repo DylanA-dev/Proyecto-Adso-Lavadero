@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AquaLavado — Inicio de sesión</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body class="login-body">
+  <div class="login-caja">
+    <div class="logo">AL</div>
+    <h1>AquaLavado</h1>
+    <p>Sistema de gestión para lavadero de vehículos</p>
+
+    <div class="login-error" id="errorLogin">Usuario o contraseña incorrectos.</div>
+
+    <div class="campo">
+      <label for="usuario">Usuario</label>
+      <input type="text" id="usuario" placeholder="Ingrese su usuario" value="admin">
+    </div>
+    <div class="campo">
+      <label for="clave">Contraseña</label>
+      <input type="password" id="clave" placeholder="Ingrese su contraseña" value="admin123">
+    </div>
+    <button class="btn" id="btnIngresar">Iniciar sesión</button>
+    <p style="font-size:11px;color:#94a3b8;margin-top:14px;">Credenciales de prueba: admin / admin123</p>
+  </div>
+
+  <script>
+    document.getElementById('btnIngresar').addEventListener('click', ingresar);
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') ingresar();
+    });
+
+    function ingresar() {
+      var u = document.getElementById('usuario').value.trim();
+      var c = document.getElementById('clave').value.trim();
+      if (u === 'admin' && c === 'admin123') {
+        sessionStorage.setItem('sesion', JSON.stringify({ usuario: u, nombre: 'Dylan Arias', rol: 'Administrador' }));
+        location.href = 'app.html';
+      } else {
+        document.getElementById('errorLogin').style.display = 'block';
+      }
+    }
+
+    // Si ya hay sesion activa, ir directo a la aplicacion
+    if (sessionStorage.getItem('sesion')) location.href = 'app.html';
+  </script>
+</body>
+</html>

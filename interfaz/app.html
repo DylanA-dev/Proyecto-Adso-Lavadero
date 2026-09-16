@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AquaLavado — Sistema de gestión</title>
+  <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+  <!-- Barra lateral / menu -->
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="logo">AL</div>
+      <div>
+        <div class="name">AquaLavado</div>
+        <div class="sub">Gestión del lavadero</div>
+      </div>
+    </div>
+    <nav id="menu">
+      <a data-seccion="dashboard" class="activo">📊 Panel principal</a>
+      <a data-seccion="lavados">🚿 Registro de lavados</a>
+      <a data-seccion="clientes">👤 Gestión de clientes</a>
+      <a data-seccion="procesos">⚙️ Control de procesos</a>
+      <a data-seccion="reportes">📈 Reportes</a>
+    </nav>
+    <div class="usuario">
+      <div class="avatar">D</div>
+      <div><strong id="nombreUsuario">Dylan Arias</strong><br><span id="rolUsuario">Administrador</span></div>
+      <a href="index.html" class="cerrar" title="Cerrar sesión">⏻</a>
+    </div>
+  </aside>
+
+  <div class="main">
+
+    <!-- ============ PANEL PRINCIPAL ============ -->
+    <section id="sec-dashboard" class="seccion visible">
+      <div class="cabecera">
+        <div>
+          <h1>Panel principal</h1>
+          <div class="meta" id="fechaHoy"></div>
+        </div>
+        <span class="insignia">Sesión activa</span>
+      </div>
+      <div class="tarjetas" id="tarjetasDashboard"></div>
+      <div class="panel">
+        <h2>Lavados por tipo (últimos 7 días)</h2>
+        <div class="grafico" id="graficoResumen"></div>
+        <div class="leyenda">
+          <span><span class="punto" style="background:#22d3ee;"></span>Básico</span>
+          <span><span class="punto" style="background:#0e3a7d;"></span>Completo</span>
+          <span><span class="punto" style="background:#10b981;"></span>Premium</span>
+          <span><span class="punto" style="background:#8b5cf6;"></span>Detallado</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ REGISTRO DE LAVADOS ============ -->
+    <section id="sec-lavados" class="seccion">
+      <div class="cabecera">
+        <div>
+          <h1>Registro de lavados</h1>
+          <div class="meta">Crear y consultar los servicios de lavado</div>
+        </div>
+      </div>
+      <div class="aviso exito" id="avisoLavado"></div>
+      <div class="panel">
+        <h2>Nuevo lavado</h2>
+        <form id="formLavado">
+          <div class="fila">
+            <div class="col">
+              <div class="campo">
+                <label for="lavCliente">Cliente</label>
+                <select id="lavCliente" required></select>
+              </div>
+              <div class="campo">
+                <label for="lavPlaca">Vehículo (placa)</label>
+                <input type="text" id="lavPlaca" placeholder="Ej. ABC123" required>
+              </div>
+            </div>
+            <div class="col">
+              <div class="campo">
+                <label for="lavTipo">Tipo de lavado</label>
+                <select id="lavTipo" required></select>
+              </div>
+              <div class="campo">
+                <label for="lavOperario">Operario</label>
+                <select id="lavOperario">
+                  <option>Juan P.</option>
+                  <option>Camilo R.</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn cian">Guardar lavado</button>
+        </form>
+      </div>
+      <div class="panel">
+        <h2>Lavados recientes</h2>
+        <table>
+          <thead>
+            <tr><th>ID</th><th>Cliente</th><th>Vehículo</th><th>Tipo</th><th>Valor</th><th>Estado</th></tr>
+          </thead>
+          <tbody id="tablaLavados"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============ GESTION DE CLIENTES ============ -->
+    <section id="sec-clientes" class="seccion">
+      <div class="cabecera">
+        <div>
+          <h1>Gestión de clientes</h1>
+          <div class="meta">Registro y consulta de clientes del lavadero</div>
+        </div>
+      </div>
+      <div class="aviso exito" id="avisoCliente"></div>
+      <div class="panel">
+        <h2>Listado de clientes</h2>
+        <div class="campo" style="max-width:340px;">
+          <input type="text" id="buscarCliente" placeholder="🔍 Buscar por nombre, cédula o placa...">
+        </div>
+        <table>
+          <thead>
+            <tr><th>Nombre</th><th>Cédula</th><th>Teléfono</th><th>Vehículo</th><th>Último lavado</th></tr>
+          </thead>
+          <tbody id="tablaClientes"></tbody>
+        </table>
+      </div>
+      <div class="panel">
+        <h2>Registrar nuevo cliente</h2>
+        <form id="formCliente">
+          <div class="fila">
+            <div class="col">
+              <div class="campo">
+                <label for="cliNombre">Nombre completo</label>
+                <input type="text" id="cliNombre" required>
+              </div>
+              <div class="campo">
+                <label for="cliCedula">Cédula</label>
+                <input type="text" id="cliCedula" required>
+              </div>
+            </div>
+            <div class="col">
+              <div class="campo">
+                <label for="cliTelefono">Teléfono</label>
+                <input type="text" id="cliTelefono" required>
+              </div>
+              <div class="campo">
+                <label for="cliVehiculo">Vehículo (marca y placa)</label>
+                <input type="text" id="cliVehiculo" required>
+              </div>
+            </div>
+          </div>
+          <button type="submit" class="btn">Guardar cliente</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ============ CONTROL DE PROCESOS ============ -->
+    <section id="sec-procesos" class="seccion">
+      <div class="cabecera">
+        <div>
+          <h1>Control de procesos</h1>
+          <div class="meta">Tablero de seguimiento de los lavados en tiempo real</div>
+        </div>
+      </div>
+      <div class="kanban" id="kanbanProcesos"></div>
+      <div class="panel" style="margin-top:25px;">
+        <h2>Etapas del proceso de lavado</h2>
+        <table>
+          <thead>
+            <tr><th>Lavado</th><th>Operario</th><th>Estado</th><th>Acción</th></tr>
+          </thead>
+          <tbody id="tablaProcesos"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============ REPORTES ============ -->
+    <section id="sec-reportes" class="seccion">
+      <div class="cabecera">
+        <div>
+          <h1>Reportes y estadísticas</h1>
+          <div class="meta">Indicadores de ingresos y productividad del lavadero</div>
+        </div>
+      </div>
+      <div class="tarjetas" id="tarjetasReportes"></div>
+      <div class="panel">
+        <h2>Ingresos por tipo de lavado</h2>
+        <div class="grafico" id="graficoIngresos"></div>
+        <div class="leyenda" id="leyendaIngresos"></div>
+      </div>
+      <div class="panel">
+        <h2>Lavados por día de la semana</h2>
+        <table>
+          <thead>
+            <tr><th>Día</th><th>Lavados</th><th>Ingresos</th></tr>
+          </thead>
+          <tbody id="tablaSemana"></tbody>
+        </table>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="js/datos.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

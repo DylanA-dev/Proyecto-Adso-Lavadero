@@ -18,3 +18,7 @@ desktop.ini
 # Temp
 *.tmp
 *.log
+
+# Capturas - no se suben al repo (pesan mucho, solo local)
+**/capturas/
+capturas/

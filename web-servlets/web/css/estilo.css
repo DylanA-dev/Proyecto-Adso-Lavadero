@@ -1,0 +1,467 @@
+:root {
+    --azul: #0e3a7d;
+    --azul-oscuro: #0b2a5b;
+    --cian: #22d3ee;
+    --fondo: #eef2f7;
+    --blanco: #ffffff;
+    --texto: #1f2937;
+    --texto-suave: #6b7280;
+    --borde: #dbe3ee;
+    --verde: #15803d;
+    --naranja: #c2410c;
+    --rojo: #b91c1c;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    background: var(--fondo);
+    color: var(--texto);
+    font-size: 14px;
+}
+
+/* ---------- Inicio de sesión ---------- */
+.pantalla-login {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, var(--azul-oscuro), var(--azul) 55%, #0c4a6e);
+    padding: 24px;
+}
+
+.tarjeta-login {
+    width: 100%;
+    max-width: 400px;
+    background: var(--blanco);
+    border-radius: 16px;
+    padding: 36px 32px 28px;
+    box-shadow: 0 22px 50px rgba(2, 20, 55, 0.35);
+}
+
+.marca {
+    text-align: center;
+    margin-bottom: 26px;
+}
+
+.logo, .logo-acento {
+    font-size: 26px;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+.logo {
+    color: var(--azul);
+}
+
+.logo-acento {
+    color: var(--cian);
+}
+
+.marca p {
+    margin-top: 6px;
+    color: var(--texto-suave);
+    font-size: 12.5px;
+}
+
+.tarjeta-login label {
+    display: block;
+    margin-bottom: 6px;
+    font-size: 12.5px;
+    font-weight: 600;
+    color: var(--texto);
+}
+
+.tarjeta-login input {
+    width: 100%;
+    padding: 11px 13px;
+    margin-bottom: 16px;
+    border: 1px solid var(--borde);
+    border-radius: 9px;
+    font-size: 14px;
+    outline: none;
+}
+
+.tarjeta-login input:focus {
+    border-color: var(--cian);
+    box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.18);
+}
+
+.boton-principal {
+    width: 100%;
+    padding: 12px 18px;
+    border: 0;
+    border-radius: 9px;
+    background: linear-gradient(120deg, var(--azul), #155e9c);
+    color: var(--blanco);
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.boton-principal:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 10px 20px rgba(14, 58, 125, 0.25);
+}
+
+.mensaje-error {
+    margin-top: 14px;
+    padding: 10px 12px;
+    border-radius: 8px;
+    background: #fee2e2;
+    color: var(--rojo);
+    font-size: 12.5px;
+    text-align: center;
+}
+
+.pie-login {
+    margin-top: 20px;
+    text-align: center;
+    color: var(--texto-suave);
+    font-size: 11.5px;
+}
+
+/* ---------- Estructura general ---------- */
+.contenedor {
+    display: flex;
+    min-height: 100vh;
+}
+
+.barra-lateral {
+    width: 232px;
+    background: linear-gradient(160deg, var(--azul-oscuro), var(--azul));
+    color: var(--blanco);
+    display: flex;
+    flex-direction: column;
+    padding: 24px 18px;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.marca-lateral {
+    margin-bottom: 30px;
+}
+
+.marca-lateral .logo,
+.marca-lateral .logo-acento {
+    font-size: 21px;
+}
+
+.marca-lateral small {
+    display: block;
+    margin-top: 4px;
+    color: #b9cbe6;
+    font-size: 11px;
+}
+
+.barra-lateral nav {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.barra-lateral nav a {
+    color: #dbe8f8;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 8px;
+    font-size: 13.5px;
+    transition: background 0.15s ease;
+}
+
+.barra-lateral nav a:hover {
+    background: rgba(255, 255, 255, 0.12);
+}
+
+.sesion {
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.18);
+    padding-top: 16px;
+    font-size: 12.5px;
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
+.sesion span {
+    color: #9fc0e8;
+    font-size: 11px;
+}
+
+.sesion .cerrar {
+    margin-top: 10px;
+    color: var(--cian);
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.contenido {
+    flex: 1;
+    padding: 28px 34px 40px;
+}
+
+.cabecera h1 {
+    font-size: 22px;
+    color: var(--azul);
+}
+
+.cabecera p {
+    color: var(--texto-suave);
+    margin-top: 4px;
+    font-size: 13px;
+}
+
+/* ---------- Tarjetas y bloques ---------- */
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.tarjeta {
+    background: var(--blanco);
+    border-radius: 12px;
+    padding: 18px 20px;
+    border: 1px solid var(--borde);
+    box-shadow: 0 6px 16px rgba(15, 39, 76, 0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.tarjeta .etiqueta {
+    color: var(--texto-suave);
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.tarjeta strong {
+    font-size: 24px;
+    color: var(--azul);
+}
+
+.tarjeta small {
+    color: var(--texto-suave);
+    font-size: 11.5px;
+}
+
+.bloque {
+    background: var(--blanco);
+    border: 1px solid var(--borde);
+    border-radius: 12px;
+    padding: 22px 24px;
+    margin-bottom: 22px;
+    box-shadow: 0 6px 16px rgba(15, 39, 76, 0.04);
+}
+
+.titulo-bloque {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.bloque h2 {
+    font-size: 16px;
+    color: var(--azul);
+    margin-bottom: 14px;
+}
+
+.titulo-bloque h2 {
+    margin-bottom: 0;
+}
+
+.contador {
+    color: var(--texto-suave);
+    font-size: 12.5px;
+}
+
+/* ---------- Tablas ---------- */
+.tabla {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 12.5px;
+}
+
+.tabla th {
+    text-align: left;
+    padding: 10px 12px;
+    background: #f3f7fc;
+    color: #33517c;
+    font-size: 11.5px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    border-bottom: 1px solid var(--borde);
+}
+
+.tabla td {
+    padding: 10px 12px;
+    border-bottom: 1px solid #eef2f8;
+    vertical-align: middle;
+}
+
+.tabla tbody tr:hover {
+    background: #f8fbff;
+}
+
+.estado {
+    display: inline-block;
+    padding: 4px 9px;
+    border-radius: 999px;
+    font-size: 10.5px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+.estado-en_cola {
+    background: #ffedd5;
+    color: var(--naranja);
+}
+
+.estado-en_proceso {
+    background: #e0f2fe;
+    color: #0369a1;
+}
+
+.estado-finalizado {
+    background: #dcfce7;
+    color: var(--verde);
+}
+
+.estado-entregado {
+    background: #dcfce7;
+    color: var(--verde);
+}
+
+/* ---------- Botones y formularios ---------- */
+.boton {
+    display: inline-block;
+    padding: 8px 14px;
+    border: 0;
+    border-radius: 8px;
+    background: var(--azul);
+    color: var(--blanco);
+    font-size: 12.5px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.boton:hover {
+    background: #155e9c;
+}
+
+.boton-secundario {
+    padding: 7px 12px;
+    border: 1px solid #fecaca;
+    border-radius: 8px;
+    background: #fff5f5;
+    color: var(--rojo);
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.boton-secundario:hover {
+    background: #fee2e2;
+}
+
+.formulario {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 14px 18px;
+    align-items: end;
+}
+
+.campo label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 12px;
+    font-weight: 600;
+    color: #33517c;
+}
+
+.campo input,
+.campo select {
+    width: 100%;
+    padding: 9px 11px;
+    border: 1px solid var(--borde);
+    border-radius: 8px;
+    font-size: 13px;
+    background: var(--blanco);
+}
+
+.campo input:focus,
+.campo select:focus {
+    outline: none;
+    border-color: var(--cian);
+    box-shadow: 0 0 0 3px rgba(34, 211, 238, 0.16);
+}
+
+.campo-amplio {
+    grid-column: span 2;
+}
+
+.formulario .boton-principal {
+    width: auto;
+    padding: 10px 20px;
+    justify-self: start;
+}
+
+.texto-suave {
+    color: var(--texto-suave);
+    font-size: 12px;
+}
+
+.pie {
+    text-align: center;
+    color: var(--texto-suave);
+    font-size: 11.5px;
+    padding: 18px;
+}
+
+/* ---------- Pantallas pequeñas ---------- */
+@media (max-width: 860px) {
+    .contenedor {
+        flex-direction: column;
+    }
+
+    .barra-lateral {
+        width: 100%;
+        height: auto;
+        position: static;
+        padding: 18px;
+    }
+
+    .barra-lateral nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .sesion {
+        margin-top: 14px;
+    }
+
+    .contenido {
+        padding: 20px;
+    }
+
+    .campo-amplio {
+        grid-column: span 1;
+    }
+
+    .tabla {
+        display: block;
+        overflow-x: auto;
+        white-space: nowrap;
+    }
+}

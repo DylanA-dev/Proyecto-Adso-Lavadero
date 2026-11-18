@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AquaLavado | Vista móvil</title>
+    <style>
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 28px;
+        padding: 30px;
+        background: linear-gradient(135deg, #0b2a5b, #0e3a7d 55%, #0c4a6e);
+        font-family: "Segoe UI", Tahoma, sans-serif;
+        color: #ffffff;
+      }
+      .marco {
+        width: 390px;
+        height: 844px;
+        border-radius: 38px;
+        border: 10px solid #0a1b33;
+        background: #eef2f7;
+        box-shadow: 0 30px 70px rgba(0, 0, 0, 0.45);
+        overflow: hidden;
+      }
+      iframe {
+        width: 100%;
+        height: 100%;
+        border: 0;
+        background: #eef2f7;
+      }
+      .leyenda h1 { font-size: 22px; margin-bottom: 8px; }
+      .leyenda p { font-size: 13px; color: #bfd4ee; max-width: 260px; line-height: 1.5; }
+    </style>
+  </head>
+  <body>
+    <div class="marco">
+      <iframe src="/" title="AquaLavado en pantalla móvil"></iframe>
+    </div>
+    <div class="leyenda">
+      <h1>AquaLavado</h1>
+      <p>Versión móvil instalable (PWA) del sistema de gestión de lavadero de vehículos.</p>
+    </div>
+  </body>
+</html>

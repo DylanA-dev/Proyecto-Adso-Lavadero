@@ -1,0 +1,19 @@
+{
+  "name": "AquaLavado — Gestión de lavadero",
+  "short_name": "AquaLavado",
+  "description": "Sistema de gestión de lavadero de vehículos: entrada, proceso y salida.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#eef2f7",
+  "theme_color": "#0e3a7d",
+  "orientation": "portrait",
+  "lang": "es-CO",
+  "icons": [
+    {
+      "src": "/icono.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

@@ -22,3 +22,12 @@ desktop.ini
 # Capturas - no se suben al repo (pesan mucho, solo local)
 **/capturas/
 capturas/
+
+# Dependencias y compilados
+node_modules/
+dist/
+target/
+build/
+*.class
+herramientas/
+npm-debug.log*

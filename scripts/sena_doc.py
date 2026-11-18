@@ -408,6 +408,21 @@ class SenaDoc:
         return self
 
     def conclusion(self, parrafos):
+        # Elimina los párrafos espaciadores que queden al final de la página
+        # anterior para evitar una página en blanco antes de la conclusión.
+        anterior = self.conclusion_h._p.getprevious()
+        while anterior is not None and anterior.tag == qn("w:p"):
+            texto = "".join(anterior.itertext()).strip()
+            tiene_salto = any(
+                br.get(qn("w:type")) == "page" for br in anterior.iter(qn("w:br"))
+            )
+            if not texto and not tiene_salto:
+                previo = anterior.getprevious()
+                anterior.getparent().remove(anterior)
+                anterior = previo
+            else:
+                break
+
         self.anchor = self.conclusion_h._p
         for texto in parrafos:
             self.p(texto)

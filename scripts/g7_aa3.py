@@ -291,8 +291,7 @@ def ev02():
         "versiones stand-alone, web y móvil de AquaLavado, con la descripción de cada "
         "historia de usuario y la captura de la interfaz correspondiente.",
         "También se documentan las pruebas de validación de fechas, números, textos, "
-        "caracteres especiales y longitudes, y se incluye el guion del video que muestra "
-        "la funcionalidad del módulo con sus respectivas validaciones.",
+        "caracteres especiales y longitudes.",
     ])
 
     d.desarrollo()
@@ -308,7 +307,6 @@ def ev02():
         "Comprobar el avance de estados y el cálculo del valor del servicio.",
         "Validar fechas, números, textos, caracteres especiales y longitudes.",
         "Consolidar los resultados de las pruebas ejecutadas.",
-        "Documentar el guion del video de funcionamiento.",
     ])
 
     d.h2("2. Historias de usuario")
@@ -433,42 +431,19 @@ def ev02():
         "tanto en el navegador como en el servidor, y las consultas utilizan parámetros "
         "para evitar la alteración de las sentencias SQL.")
 
-    d.h2("6. Guion del video")
-    d.p("El video muestra la funcionalidad del módulo y las validaciones. Se recomienda "
-        "grabarlo en una sola toma, con el nombre del aprendiz al inicio y una duración "
-        "entre cinco y siete minutos.")
-    d.tabla(
-        ["Escena", "Contenido", "Duración"],
-        [
-            ["1. Presentación", "Nombre del aprendiz, programa y nombre del sistema.", "15 s"],
-            ["2. Acceso", "Inicio de sesión con credenciales válidas e intento con clave incorrecta.", "30 s"],
-            ["3. Panel", "Recorrido por los indicadores y las últimas órdenes.", "30 s"],
-            ["4. Clientes", "Registro de un cliente y validación de documento y teléfono.", "60 s"],
-            ["5. Órdenes", "Registro de una orden y cálculo del valor del servicio.", "60 s"],
-            ["6. Estados", "Avance de EN_COLA a ENTREGADO y fecha de salida.", "45 s"],
-            ["7. Reportes", "Consulta de ingresos y lavados por servicio.", "30 s"],
-            ["8. Escritorio", "Operación desde la aplicación stand-alone.", "45 s"],
-            ["9. Móvil", "Apertura de la versión instalable y registro desde pantalla pequeña.", "45 s"],
-            ["10. Cierre", "Conclusiones y despedida.", "15 s"],
-        ],
-        anchos=[3.2, 10.4, 2.2],
-        caption="Guion del video de funcionamiento.",
-        size=7.5,
-    )
-
-    d.h2("7. Repositorio y entrega")
+    d.h2("6. Repositorio y entrega")
     d.p("Las pruebas se ejecutaron sobre el código publicado en " + REPO + ". La entrega "
-        "incluye los archivos del proyecto, este documento, el video y el archivo con el "
-        "enlace del repositorio, comprimidos en DylanArias_AA3_EV02.zip.")
+        "incluye los archivos del proyecto, este documento y el archivo con el enlace del "
+        "repositorio, comprimidos en DylanArias_AA3_EV02.zip.")
 
     d.conclusion([
         "Las pruebas ejecutadas sobre las tres versiones confirmaron el cumplimiento de "
         "las historias de usuario y el funcionamiento de las validaciones. El sistema "
         "rechaza documentos, teléfonos y correos inválidos, controla las longitudes y "
         "conserva la integridad de la información almacenada.",
-        "La documentación de cada historia con su pantalla y el guion del video permiten "
-        "verificar la trazabilidad entre los requisitos y la implementación. El módulo "
-        "queda probado y disponible para la sustentación del proyecto.",
+        "La documentación de cada historia con su pantalla permite verificar la "
+        "trazabilidad entre los requisitos y la implementación. El módulo queda probado y "
+        "disponible para la sustentación del proyecto.",
     ])
 
     d.bibliografia([

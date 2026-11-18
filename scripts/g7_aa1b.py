@@ -178,9 +178,8 @@ def ev05():
     d.intro([
         "La evidencia de desempeño de esta actividad consiste en ejecutar los comandos "
         "básicos de Git local y remoto sobre un repositorio de práctica llamado "
-        "Programa-Git, y presentar el ejercicio en un video. Este documento reúne el paso a "
-        "paso ejecutado, los comandos utilizados, los resultados obtenidos y el guion del "
-        "video que se entrega en formato MP4.",
+        "Programa-Git. Este documento reúne el paso a paso ejecutado, los comandos "
+        "utilizados y los resultados obtenidos.",
         "El ejercicio permite comprobar la creación de un repositorio, la preparación y "
         "confirmación de cambios, la creación de un archivo, el enlace con un repositorio "
         "remoto y la publicación del historial en GitHub.",
@@ -195,10 +194,9 @@ def ev05():
     d.bullets([
         "Crear un repositorio local y un repositorio público en GitHub.",
         "Preparar y confirmar los cambios del proyecto.",
-        "Crear el archivo kotlin.txt con los datos del aprendiz.",
+        "Crear el archivo kotlin.txt con los datos personales.",
         "Enlazar el repositorio local con el remoto y publicar los cambios.",
         "Verificar el historial y el estado del repositorio.",
-        "Documentar el guion del video de sustentación.",
     ])
 
     d.h2("2. Preparación del ejercicio")
@@ -233,8 +231,8 @@ def ev05():
         "push, con la URL del repositorio remoto.")
 
     d.h2("4. Paso 2: crear el archivo y confirmar los cambios")
-    d.p("Se creó el archivo kotlin.txt con el nombre y el correo del aprendiz, se agregó al "
-        "área de preparación y se confirmó con el mensaje solicitado por la guía.")
+    d.p("Se creó el archivo kotlin.txt con el nombre y el correo, se agregó al "
+        "área de preparación y se confirmó con el mensaje solicitado.")
     d.codigo(
         "echo Dylan David Arias Rojas > kotlin.txt\n"
         "echo Correo: dylandavidariasrojas@gmail.com >> kotlin.txt\n"
@@ -293,48 +291,14 @@ def ev05():
         caption="Resultados del ejercicio.",
     )
 
-    d.h2("8. Guion del video")
-    d.p("El video se entrega en formato MP4, con una presentación inicial en la que se "
-        "indica el nombre del aprendiz y los ejercicios que se van a realizar. La grabación "
-        "muestra la terminal y la página de GitHub, y explica cada comando antes de "
-        "ejecutarlo.")
-    d.tabla(
-        ["Momento", "Acción en pantalla", "Explicación"],
-        [
-            ["1. Presentación", "Diapositiva con el nombre y el objetivo del ejercicio.", "Saludo, nombre, programa y relación del ejercicio con el versionamiento."],
-            ["2. Repositorio local", "Crear la carpeta y ejecutar git init.", "Explicar qué es un repositorio local y para qué sirve la rama master."],
-            ["3. Archivo", "Crear kotlin.txt con el nombre y el correo.", "Mostrar el contenido del archivo antes de agregarlo."],
-            ["4. Preparación y commit", "Ejecutar git add, git status y git commit.", "Explicar el área de preparación y el mensaje de confirmación."],
-            ["5. Historial", "Ejecutar git log --oneline.", "Identificar el commit, el autor y el mensaje."],
-            ["6. Repositorio remoto", "Crear el repositorio público Programa-Git en GitHub.", "Explicar la diferencia entre repositorio local y remoto."],
-            ["7. Enlace", "Ejecutar git remote add y git remote -v.", "Mostrar las URL de lectura y escritura."],
-            ["8. Publicación", "Ejecutar git push github master.", "Explicar el envío de los commits al repositorio remoto."],
-            ["9. Verificación", "Abrir GitHub y mostrar el archivo y el historial.", "Confirmar que el archivo y el commit están publicados."],
-            ["10. Cierre", "Volver a la terminal y despedirse.", "Resumir lo aprendido y agradecer."],
-        ],
-        anchos=[3.4, 6.8, 5.4],
-        caption="Guion del video del ejercicio de Git.",
-        size=7,
-    )
-
-    d.h2("9. Recomendaciones para la grabación")
-    d.bullets([
-        "Grabar en una sola toma y con una resolución mínima de 1280 x 720.",
-        "Aumentar el tamaño de la letra de la terminal para facilitar la lectura.",
-        "Explicar cada comando antes de ejecutarlo y leer el resultado en voz alta.",
-        "Mantener el repositorio de GitHub abierto en otra pestaña para mostrar la verificación.",
-        "No mostrar contraseñas, tokens ni datos personales diferentes a los solicitados.",
-        "Nombrar el archivo del video con el código de la evidencia y el nombre del aprendiz.",
-    ])
-
     d.conclusion([
         "El ejercicio permitió ejecutar el ciclo completo de Git: crear el repositorio "
         "local, preparar y confirmar los cambios, enlazar el repositorio remoto y publicar "
         "el historial en GitHub. La captura de la ejecución evidencia el funcionamiento de "
         "los comandos y la creación del archivo solicitado.",
-        "El guion del video organiza la sustentación y asegura que se expliquen tanto los "
-        "comandos locales como los remotos. Con esta evidencia queda demostrada la "
-        "instalación, la configuración y el uso de Git en el proyecto.",
+        "La ejecución de los comandos locales y remotos, junto con la verificación del "
+        "historial, demuestra la instalación, la configuración y el uso de Git en el "
+        "proyecto.",
     ])
 
     d.bibliografia([
